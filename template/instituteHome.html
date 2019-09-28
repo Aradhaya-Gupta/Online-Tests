@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="stylesheet" href="/static/bootstrap.min.css"/>
+<script src="/static/jquery.min.js"></script>
+<script src="/static/bootstrap.min.js"></script>
+<style>
+.button2 {background-color: #008CBA;font-size: 20px;} /* Blue */
+.button3 {background-color: #f44336;font-size: 20px;} /* Red */ 
+.button4 {background-color: #4CAF50;font-size: 20px;} /* Gray */ 
+.button5 {background-color: #555555;font-size: 20px;} /* Black */
+</style>
+</head>
+<body class=bg-info>
+WELCOME TO INSTITUTE HOME {{UNAME}}
+<div class="navbar navbar-default">
+<ul class="nav navbar-nav">
+<li><a href="addstudent" class="button2" target=work> ADD STUDENT </a></li>
+<li><a href="addinstructor" class="button3" target=work> ADD INSTRUCTOR </a></li>
+<li><a href="questionSetup" class="button4" target=work> ADD QUESTIONS </a></li>
+<li><a href="quizsetup" class="button2" target=work> ADD QUIZ </a></li>
+<li><a href="changePassword_institute"class="button3"  target=work> CHANGE PASSWORD </a></li>
+<li><a href="questionBank"class="button4"  target=work> QUESTION BANK </a></li>
+<li><a href="signout" class="button2"> SIGN OUT </a></li>
+</ul>
+</div>
+
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" name="work"></iframe>
+  </div>
+</body>
+</html>
+

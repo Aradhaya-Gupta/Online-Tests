@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ln">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<script src="/static/iquery.min.js"></script>
+<script src="/static/jquery-3.3.1.min.js"></script>
+<script src="/static/bootstrap.min.js"></script>
+</head>
+<body>
+<H1>QUESTION SETUP</H1>
+<FORM CLASS="form-horizontal" METHOD="POST" ACTION="questionSetupSave">
+{% csrf_token %}
+	<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="ques">QUESTION</LABEL>
+		<DIV CLASS="col-sm-6">
+			<INPUT TYPE="TEXT" ID="ques" NAME="ques" CLASS="form-control" />
+			
+		</DIV>
+	</DIV>
+	<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="a1">ANSWER A</LABEL>
+		<DIV CLASS="col-sm-6">
+			<INPUT TYPE="TEXT" ID="a1" NAME="a1" CLASS="form-control" />
+		</DIV>
+	</DIV>
+	<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="a2">ANSWER B</LABEL>
+		<DIV CLASS="col-sm-6">
+			<INPUT TYPE="TEXT" ID="a2" NAME="a2" CLASS="form-control" />
+		</DIV>
+	</DIV>
+	<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="a3">ANSWER C</LABEL>
+		<DIV CLASS="col-sm-6">
+			<INPUT TYPE="TEXT" ID="a3" NAME="a3" CLASS="form-control" />
+		</DIV>
+	</DIV>
+	<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="a4">ANSWER D</LABEL>
+		<DIV CLASS="col-sm-6">
+			<INPUT TYPE="TEXT" ID="a4" NAME="a4" CLASS="form-control" />
+		</DIV>
+	</DIV>
+	<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="ca">CORRECT ANSWER</LABEL>
+		<DIV CLASS="col-sm-6">
+			<select ID="ca" NAME="ca" CLASS="form-control" >
+			<option value="disabled">Select</option>
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+			</select>
+		</DIV>
+	</DIV>
+		<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="marks">MARKS</LABEL>
+		<DIV CLASS="col-sm-6">
+			<select ID="marks" NAME="marks" CLASS="form-control" >
+			<option value="disabled">Select</option>
+			<option value="A">0.5</option>
+			<option value="B">1</option>
+			<option value="C">2</option>
+			<option value="D">5</option>
+			<option value="D">7</option>
+			<option value="D">10</option>
+			</select>
+		</DIV>
+	</DIV>
+	<INPUT TYPE="SUBMIT" VALUE="SUBMIT" CLASS="form-control" />
+</BODY>
+</HTML>

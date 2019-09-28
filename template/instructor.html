@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ln">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<script src="/static/iquery.min.js"></script>
+<script src="/static/jquery-3.3.1.min.js"></script>
+<script src="/static/bootstrap.min.js"></script>
+<script>
+function check()
+{
+eid=$("#eid").val();
+//alert("eid");
+$.get("checkEmail?eid="+eid,function(data,status){
+alert(data);
+});
+}</script>
+</head>
+<body>
+<H1>  INSTRUCTOR REGISTRATION   </H1>
+<FORM CLASS="form-horizontal" METHOD="POST" ACTION="instructorSave">
+{% csrf_token %}
+	<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="userid">EMAIL-ID</LABEL>
+		<DIV CLASS="col-sm-6">
+			<INPUT TYPE="TEXT" ID="userid" NAME="userid" CLASS="form-control" />
+			<button type=button id="cfs" onclick="check()"> Check for Availability </button>
+			
+		</DIV>
+	</DIV>
+	<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="password">PASSWORD</LABEL>
+		<DIV CLASS="col-sm-6">
+			<INPUT TYPE="PASSWORD" ID="password" NAME="password" CLASS="form-control" />
+		</DIV>
+	</DIV>
+	<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="cpwd">CONFIRM PASSWORD</LABEL>
+		<DIV CLASS="col-sm-6">
+			<INPUT TYPE="PASSWORD" ID="cpwd" NAME="cpwd" CLASS="form-control" />
+		</DIV>
+		</DIV>
+		<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="name">USER NAME</LABEL>
+		<DIV CLASS="col-sm-6">
+			<INPUT TYPE="TEXT" ID="name" NAME="name" CLASS="form-control" />
+		</DIV>
+	</DIV>
+	<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="gender">GENDER</LABEL>
+		<DIV CLASS="col-sm-6">
+			<INPUT TYPE="radio"  NAME="gender" value="male"  >MALE
+			<BR/>
+			<INPUT TYPE="RADIO" NAME="gender" value="female">FEMALE
+		</DIV>
+	</DIV>
+	<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="birthdate">DOB</LABEL>
+		<DIV CLASS="col-sm-6">
+			<INPUT TYPE="date" ID="birthdate" NAME="birthdate" CLASS="form-control" />
+		</DIV>
+	</DIV>
+	<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="instname">INSTITUTE NAME</LABEL>
+		<DIV CLASS="col-sm-6">
+			<INPUT TYPE="TEXT" ID="instname" NAME="instname" CLASS="form-control" />
+		</DIV>
+	</DIV>
+	<INPUT TYPE="SUBMIT" VALUE="SUBMIT" CLASS="form-control" />
+</BODY>
+</HTML>

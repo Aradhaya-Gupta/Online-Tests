@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ln">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<script src="/static/iquery.min.js"></script>
+<script src="/static/jquery-3.3.1.min.js"></script>
+<script src="/static/bootstrap.min.js"></script>
+</head>
+<body>
+<H1>QUIZ SETUP</H1>
+<FORM CLASS="form-horizontal" METHOD="POST" ACTION="quizSetupSave">
+{% csrf_token %}
+	<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="ques">QUESTION</LABEL>
+		<DIV CLASS="col-sm-6">
+			<INPUT TYPE="TEXT" ID="ques" NAME="ques" CLASS="form-control" />
+			
+		</DIV>
+	</DIV>
+	<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="a1">ANSWER 1</LABEL>
+		<DIV CLASS="col-sm-6">
+			<INPUT TYPE="TEXT" ID="a1" NAME="a1" CLASS="form-control" />
+		</DIV>
+	</DIV>
+	<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="a2">ANSWER 2</LABEL>
+		<DIV CLASS="col-sm-6">
+			<INPUT TYPE="TEXT" ID="a2" NAME="a2" CLASS="form-control" />
+		</DIV>
+	</DIV>
+	<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="a3">ANSWER 3</LABEL>
+		<DIV CLASS="col-sm-6">
+			<INPUT TYPE="TEXT" ID="a3" NAME="a3" CLASS="form-control" />
+		</DIV>
+	</DIV>
+	<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="a4">ANSWER 4</LABEL>
+		<DIV CLASS="col-sm-6">
+			<INPUT TYPE="TEXT" ID="a4" NAME="a4" CLASS="form-control" />
+		</DIV>
+	</DIV>
+	<DIV CLASS="form-group">
+		<LABEL CLASS="control-label col-sm-2" FOR="ca">CORRECT ANSWER</LABEL>
+		<DIV CLASS="col-sm-6">
+			<INPUT TYPE="TEXT" ID="ca" NAME="ca" CLASS="form-control" />
+		</DIV>
+	</DIV>	
+	<INPUT TYPE="SUBMIT" VALUE="SUBMIT" CLASS="form-control" />
+</BODY>
+</HTML>
